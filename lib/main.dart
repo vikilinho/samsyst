@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:samsys/views/employee_details_screen.dart';
 import 'package:samsys/views/employee_list_screen.dart';
 import 'package:samsys/views/employee_profile_screen.dart';
 
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        EmployeeProfile.emplID: (context) => EmployeeProfile(),
+        EmployeeList.empListID: (context) => EmployeeList(),
+      },
       home: EmployeeList(),
     );
   }

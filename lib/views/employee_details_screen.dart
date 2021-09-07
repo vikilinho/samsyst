@@ -4,6 +4,8 @@ import 'package:samsys/components/listCard.dart';
 import 'package:samsys/model/employee.dart';
 
 class EmployeeDetail extends StatelessWidget {
+  static const String detID = 'DETAIL_SCREEN';
+
   final Employee employee;
 
   const EmployeeDetail({required this.employee});

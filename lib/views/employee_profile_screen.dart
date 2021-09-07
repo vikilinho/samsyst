@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class EmployeeProfile extends StatefulWidget {
   const EmployeeProfile({Key? key}) : super(key: key);
+  static const String emplID = 'PROFILE_SCREEN';
 
   @override
   _EmployeeProfileState createState() => _EmployeeProfileState();

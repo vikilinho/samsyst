@@ -4,6 +4,7 @@ import 'package:samsys/model/employee_list.dart';
 import 'package:samsys/views/employee_details_screen.dart';
 
 class EmployeeList extends StatefulWidget {
+  static const String empListID = 'LIST_SCREEN';
   @override
   _EmployeeListState createState() => _EmployeeListState();
 }
