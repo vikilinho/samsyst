@@ -10,6 +10,15 @@ class EmployeeList extends StatefulWidget {
 
 class _EmployeeListState extends State<EmployeeList> {
   bool isvis = false;
+
+  final key = GlobalKey();
+
+  void _makeVisible(bool nowvis) {
+    setState(() {
+      isvis = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +57,9 @@ class _EmployeeListState extends State<EmployeeList> {
               itemBuilder: (BuildContext context, int index) => ListCard(
                   employee: staff[index],
                   isVisible: isvis,
+                  delete: () {
+                    staff.removeAt(index);
+                  },
                   longpress: () {
                     setState(() {
                       isvis = true;
@@ -64,7 +76,7 @@ class _EmployeeListState extends State<EmployeeList> {
                     );
                   }),
             ),
-          )
+          ),
         ])),
       ),
     );

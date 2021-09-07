@@ -4,8 +4,10 @@ class Employee {
   final String number;
   final String image;
   final String email;
+  final int id;
 
   Employee({
+    required this.id,
     required this.name,
     required this.position,
     required this.number,

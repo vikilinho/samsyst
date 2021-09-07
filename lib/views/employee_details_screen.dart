@@ -40,7 +40,12 @@ class EmployeeDetail extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(children: [
-          ListCard(employee: employee, press: () {}, longpress: () {}),
+          ListCard(
+            employee: employee,
+            delete: () {},
+            press: () {},
+            longpress: () {},
+          ),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
