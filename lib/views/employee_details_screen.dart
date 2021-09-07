@@ -40,7 +40,7 @@ class EmployeeDetail extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(children: [
-          ListCard(employee: employee, press: () {}),
+          ListCard(employee: employee, press: () {}, longpress: () {}),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
@@ -53,8 +53,8 @@ class EmployeeDetail extends StatelessWidget {
                     children: [
                       Container(
                         height: 100,
-                        width: 50,
-                        color: Colors.grey,
+                        width: 100,
+                        color: Colors.black12,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -92,19 +92,15 @@ class EmployeeDetail extends StatelessWidget {
                                     ]),
                                   ),
                                 ),
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 12),
-                                        child: Container(
-                                          height: 0.5,
-                                          width: 300,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ]),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 8.0),
+                                  child: Container(
+                                    height: 0.5,
+                                    width: 230.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.all(12.0),
                                   child: Container(
@@ -133,6 +129,9 @@ class EmployeeDetail extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 15,
+                ),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade200),
@@ -141,8 +140,8 @@ class EmployeeDetail extends StatelessWidget {
                     children: [
                       Container(
                         height: 100,
-                        width: 50,
-                        color: Colors.grey,
+                        width: 100,
+                        color: Colors.black12,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -150,7 +149,7 @@ class EmployeeDetail extends StatelessWidget {
                               SizedBox(
                                 height: 10,
                               ),
-                              Text('FEB', style: TextStyle(fontSize: 20)),
+                              Text('JAN', style: TextStyle(fontSize: 20)),
                             ]),
                       ),
                       Row(
@@ -180,19 +179,129 @@ class EmployeeDetail extends StatelessWidget {
                                     ]),
                                   ),
                                 ),
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 12),
-                                        child: Container(
-                                          height: 0.5,
-                                          width: 300,
-                                          color: Colors.black,
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 8.0),
+                                  child: Container(
+                                    height: 0.5,
+                                    width: 230.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Container(
+                                    child: Row(children: [
+                                      Text(
+                                        "RECEIVABLE:",
+                                        style: GoogleFonts.mulish(
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        "₦100000",
+                                        style: GoogleFonts.mulish(
+                                          fontSize: 20,
                                         ),
                                       ),
                                     ]),
+                                  ),
+                                ),
+                              ])
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        "2019",
+                        style: GoogleFonts.mulish(
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Container(
+                          height: 0.5,
+                          width: 230.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 100,
+                        width: 100,
+                        color: Colors.black12,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.calendar_today),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text('DEC', style: TextStyle(fontSize: 20)),
+                            ]),
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Container(
+                                    child: Row(children: [
+                                      Text(
+                                        "BORROWED:",
+                                        style: GoogleFonts.mulish(
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        "₦50000",
+                                        style: GoogleFonts.mulish(
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 8.0),
+                                  child: Container(
+                                    height: 0.5,
+                                    width: 230.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.all(12.0),
                                   child: Container(

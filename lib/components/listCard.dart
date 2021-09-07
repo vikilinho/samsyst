@@ -5,20 +5,27 @@ import 'package:samsys/model/employee.dart';
 class ListCard extends StatelessWidget {
   final Employee employee;
   final VoidCallback press;
+  final VoidCallback longpress;
+  bool isVisible;
 
-  ListCard({required this.employee, required this.press});
+  ListCard(
+      {required this.employee,
+      required this.press,
+      required this.longpress,
+      this.isVisible = false});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: press,
+      onLongPress: longpress,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Card(
           color: Colors.white,
           elevation: 2.0,
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 5),
             child: Container(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +36,7 @@ class ListCard extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: 145,
+                          height: 150,
                           width: 130,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -38,13 +45,6 @@ class ListCard extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          // child: Hero(
-                          //   tag: "${employee.image}",
-                          //   child: Image.asset(
-                          //     employee.image,
-                          //     fit: BoxFit.contain,
-                          //   ),
-                          // ),
                         ),
                       ),
                     ],
@@ -97,6 +97,22 @@ class ListCard extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Visibility(
+                        visible: isVisible,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                              icon: Icon(Icons.edit),
+                              onPressed: () {},
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.delete),
+                              onPressed: () {},
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   )),
                 ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:samsys/components/listCard.dart';
 import 'package:samsys/model/employee_list.dart';
 import 'package:samsys/views/employee_details_screen.dart';
@@ -10,6 +9,7 @@ class EmployeeList extends StatefulWidget {
 }
 
 class _EmployeeListState extends State<EmployeeList> {
+  bool isvis = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +47,12 @@ class _EmployeeListState extends State<EmployeeList> {
               itemCount: staff.length,
               itemBuilder: (BuildContext context, int index) => ListCard(
                   employee: staff[index],
+                  isVisible: isvis,
+                  longpress: () {
+                    setState(() {
+                      isvis = true;
+                    });
+                  },
                   press: () {
                     Navigator.push(
                       context,
